@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Jungle Hieroglyphs Mobile</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquerymobile.js"></script>
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/jquerymobile.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- home -->
+	<section data-role="page" id="home">
+		<article data-role="content">
+			<!-- content -->
+			<img src="images/jh_logo.gif" alt="Jungle Hieroglyphs">
+			<div data-role="controlgroup">
+				<a href="#blog" class="ui-btn ui-btn-a ui-icon-edit ui-btn-icon-left ui-corner-all">Blog</a>
+				<a href="#videos" class="ui-btn ui-btn-a ui-icon-video ui-btn-icon-left ui-corner-all">Videos</a>
+				<a href="#photos" class="ui-btn ui-btn-a ui-icon-camera ui-btn-icon-left ui-corner-all">Photos</a>
+				<a href="#tweets" class="ui-btn ui-btn-a ui-icon-comment ui-btn-icon-left ui-corner-all">Tweets</a>
+			</div>
+		</article>
+	</section>
+
+	<!-- page : Blog -->
+	<section id="blog" class="header_default footer_default" data-role="page" data-title="Blog">
+		<div data-role="content" id="postlist"></div>
+	</section>
+	<!-- page: Blogposts -->
+	<section class="header_default footer_default" data-role="page" id="blogpost" data-title="Posts">
+		<div data-role="content">
+			<div id="mypost"></div>
+		</div>
+	</section>
+	<!-- page: YouTube -->
+	<section id="videos" class="header_default footer_default" data-role="page" data-title="Videos">
+		<div data-role="content">
+			<div class="ui-grid-a" id="videoList">
+
+			</div>
+		</div>
+	</section>
+
+	<section class="header_default footer_default" id="videoplayer" data-role="page" data-title="Player">
+		<div data-role="content">
+			<div id="myplayer"></div>
+		</div>
+	</section>
+	<script type="text/javascript" src="https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUvuN-C2fgOPS9epHeUveNEQ&key=AIzaSyAV0XHjLPYLQvRqx-Os0afl6BTAa0g5lPc&callback=listVideos"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://www.junglehieroglyphs.com/category/images/?json=1&callback=listPosts"></script>
+</body>
+</html>
